@@ -1,0 +1,72 @@
+
+.hero {
+    height: 100svh;
+    // background-image: url('./img/Image Banner.png'); // didnt work
+    position: relative;
+    background: $secondary-color;
+
+    & .section {
+        position: relative;
+        width: 500px;
+        transform: translateX(3rem) translateY(7rem);
+
+        & h1 {
+            font-size: 50px;
+            line-height: 60px;
+
+            & span {
+                color: $secondary-color;
+            }
+        }
+
+        & p {
+            font-size: 14px;
+            color: #444;;
+            margin: 2rem 0;
+        }
+
+        & .search-section {
+            display: flex;
+            // height: 50px;
+
+            & input {
+                width: 550px;
+                padding: 20px 110px 10px 20px;
+                color: #555;
+                font-weight: 600;
+                font-size: 13px;
+                outline: none;
+                border-radius: 10px;
+                border: none;
+
+                &::placeholder {
+                    color: #888;
+                }
+            }
+
+            & button {
+                margin-left: -10px;
+                width: 140px;
+                font-size: 16px;
+                margin-left: -100px;
+                font-weight: 600;
+                color: $primary-color;
+                background: $secondary-color;
+                border-radius: 4px;
+                border: none;
+            }
+        }
+    }
+
+    & img {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        opacity: 0.85;
+        width: 100%;
+    }
+}
