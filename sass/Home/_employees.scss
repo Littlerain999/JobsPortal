@@ -1,0 +1,91 @@
+
+.employees {
+    background: $primary-color;
+    @include flexer(start, center, 20px, column);
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    & .list {
+        width: 90%;
+        @include flexer(center, center, 30px, column);
+
+        & .item {
+            @include grid(100px 1fr auto, 100px, center, 4px);
+            width: 100%;
+            background: $primary-color;
+            border-radius: 10px;
+            box-shadow: 0 4px 3px #00000038,
+                        0 -4px 3px #00000009;
+            padding: 18px 20px 18px 30px;
+
+            & .logo {
+                background: #ddd;
+                height: 80px;
+                width: 80px;
+                border-radius: 1000%;
+                
+                & img {
+                    @include flexer(center, center);
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            & .details {
+                @include flexer(center, start, 5px, column);
+
+                & h4 {
+                    color: #555;
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+
+                & h3 {
+                    font-size: 23px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                }
+
+                & .others {
+                    @include flexer(center, center, 1rem);
+                    font-size: 14px;
+
+                    & div {
+                        @include flexer(center, center);
+                    }
+
+                    & i, ion-icon {
+                        color: $secondary-color;
+                        font-size: 20px;
+                        font-weight: 600;
+                        margin-right: 6px;
+                    }
+                }
+            }
+
+            & .detailsViewBtn {
+                background-color: $secondary-color;
+                color: #eee;
+                border: none;
+                border-radius: 8px;
+                padding: 10px 16px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    & .viewMore {
+        background-color: $secondary-color;
+        margin: auto;
+        font-size: 15px;
+        color: $primary-color;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 14px;
+        @include flexer(center, center, 5px);
+
+        & ion-icon { font-size: 20px; }
+    }
+}

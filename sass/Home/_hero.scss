@@ -1,6 +1,7 @@
 
 .hero {
     height: 100svh;
+    max-height: 800px;
     // background-image: url('./img/Image Banner.png'); // didnt work
     position: relative;
     background: $secondary-color;

@@ -1,7 +1,6 @@
 @import './config';
-@import './header';
-@import './hero';
-@import './category';
+@import "./home";
+@import "./footer";
 
 body {
     margin: auto;
@@ -11,43 +10,3 @@ body {
 
 html { background: #eee }
 
-.employees {
-    background: $primary-color;
-
-    & .list {
-        // @include flex(center);
-        // flex-direction: column;
-        // gap: 30px;
-        @include flexer(center, center, 30px, column);
-        padding: 0 40px;
-
-        & .item {
-            @include grid(100px 1fr 100px, 100px, center, 4px);
-            width: 100%;
-            background: $primary-color;
-            border-radius: 10px;
-            box-shadow: 6px 6px 10px -1px #000,
-                        -6px -6px 10px -1px #fff;
-            padding: 0 20px 0 30px;
-
-            & .logo {
-                background: #ddd;
-                height: 80px;
-                width: 80px;
-                border-radius: 1000%;
-                
-                & img {
-                    @include flexer(center, center);
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    object-position: center;
-                }
-            }
-
-            & .details {
-                @include flexer(center, start, $direction: column);
-            }
-        }
-    }
-}
