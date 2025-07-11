@@ -1,0 +1,50 @@
+
+main {
+    background: $primary-color;
+    padding: 10px 60px;
+    padding-left: 70px;
+    padding-bottom: 30px;
+    
+    & .list {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        font-size: 12px;
+
+        &__head {
+            border-bottom: 1px solid #000;
+            &__contents {
+                font-weight: 600;
+            }
+        }
+
+
+        &__head, &__list__items {
+            @include grid(1fr 100px 100px 150px 100px, auto, center, 0);
+            padding: 20px 20px 18px 30px;
+        }
+
+        &__list__items {
+            border-bottom: 1px solid #ddd;
+            font-size: 11px;
+        }
+
+        &__list__items .action {
+            @include grid(1fr 1fr 1fr, center, 100%, 2px);
+            justify-content: center;
+
+            & button {
+                font-size: 15px;
+                @include flexer(center, center);
+                background: none;
+                border: none;
+
+
+                &#view { color: $secondary-color }
+                &#edit { color: #67d9ff }
+                &#delete { color: red }
+            }
+        }
+
+    }
+}

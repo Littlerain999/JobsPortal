@@ -1,0 +1,12 @@
+@media screen and (max-width: 660px) {
+    .hero img { z-index: -10; scale: 0; }
+    .hero {
+        background-color: rgba($secondary-color, 0.3);
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .hero .section .search-section input {
+        width: 300px;
+    }
+}

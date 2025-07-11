@@ -1,0 +1,70 @@
+
+.header {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 20px 0;
+}
+
+.form-container {
+    background: $primary-color;
+    padding: 20px;
+    
+    & .form {
+        padding: 30px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        @include flexer(start, center, 0, column);
+
+        &__group {
+            @include grid(1fr, auto, center, 10px);
+            padding: 10px 0;
+
+            & label { font-weight: 600; }
+
+            & input, select, textarea {
+                border: 1px solid #ddd;
+                background: none;
+                padding: 10px 16px;
+                outline: none;
+                border-radius: 5px;
+                
+                &::placeholder {
+                    color: #aaa;
+                    font-weight: 600;
+                }
+            }
+
+            & textarea {
+                min-height: 180px;
+                max-width: 820px;
+                min-width: 820px;
+                margin: auto;
+            }
+
+            &.fullWidth {
+                width: 100%;
+            }
+        }
+
+        &__row {
+            @include  grid(1fr 1fr, auto, center, 15px);
+            width: 100%;
+        }
+
+        & .btns {
+            width: 100%;
+            @include flexer(right, center);
+
+            & button {
+                background: $secondary-color;
+                color: $primary-color;
+                border-radius: 5px;
+                border: none;
+                padding: 10px 20px;
+                font-size: 15px;
+                font-weight: 600;
+            }
+        }
+    }
+}

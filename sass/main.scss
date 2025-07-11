@@ -1,12 +1,16 @@
 @import './config';
 @import "./home";
+@import "./Apply/Apply";
+@import "./Form/form";
+@import "./List/list";
+@import "./LoginnNRegister/style";
 @import "./footer";
 
 body {
     margin: auto;
     max-width: 1020px;
     position: relative;
+    padding-top: 50px;
 }
 
 html { background: #eee }
-
